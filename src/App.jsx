@@ -8,15 +8,23 @@ function App() {
   // console.log(double);
   return (
     <div className="container">
-      {YoutubeData.map((item) => (
-        <YoutubeItem
-          key={item.id}
-          author={item.author}
-          title={item.title}
-          avatar={item.avatar}
-          image={item.image}
-        ></YoutubeItem>
-      ))}
+      {YoutubeData.map((item, index) => {
+        let newClass = "";
+        if (index === 1) newClass = "abc";
+        {
+          /* const newClass = index === 1 ? "abc" : ""; */
+        }
+        return (
+          <YoutubeItem
+            key={item.id}
+            author={item.author}
+            title={item.title}
+            avatar={item.avatar || item.image}
+            image={item.image}
+            className={newClass}
+          ></YoutubeItem>
+        );
+      })}
       {/* <Feature></Feature>
       <Feature></Feature>
       <Feature></Feature> */}
@@ -36,7 +44,7 @@ function App() {
 }
 function YoutubeItem(props) {
   return (
-    <div className="youtube-item">
+    <div className={`youtube-item ${props.className}`}>
       <div className="youtube-image" style={{ height: "250px" }}>
         <img
           src={props.image}
