@@ -10,8 +10,12 @@ function Toggle() {
   //   const array = useState(false);
   //   console.log(array);
   const [on, setOn] = useState(false);
-  console.log(on, setOn);
+  console.log(on);
 
-  return <div className="toggle"></div>;
+  return (
+    <div className="toggle" onClick={() => setOn(true)}>
+      Toggle {on ? "On" : "Off"}
+    </div>
+  );
 }
 export default Toggle;
