@@ -1,10 +1,11 @@
 import { YoutubeData } from "../../Data";
 import YoutubeItem from "./YoutubeItem";
 
-const YoutubeList = () => {
+const YoutubeList = (props) => {
   return (
     <div>
       <div className="container">
+        {props.children}
         {YoutubeData.map((item, index) => {
           let newClass = "";
           if (index === 1) newClass = "abc";
