@@ -24,8 +24,20 @@ function App() {
 function YoutubeItem(props) {
   return (
     <div className="youtube-item">
-      <div className="youtube-image">
-        <img src={props.image}></img>
+      <div
+        className="youtube-image"
+        //  style={{ height: "250px" }}
+      >
+        <img
+          src={props.image}
+          // style={{
+          //   width: "100%",
+          //   maxWidth: "100%",
+          //   display: "block",
+          //   objectFit: "cover",
+          //   height: "100%",
+          // }}
+        ></img>
       </div>
       <div className="youtube-footer">
         <img className="youtube-avatar" src={props.avatar}></img>
