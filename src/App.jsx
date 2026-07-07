@@ -1,5 +1,5 @@
 import "./App.css";
-import Toggle from "./component/state/Toggle";
+import Toggle from "./component/toggle/Toggle";
 // import YoutubeList from "./component/youtube/YoutubeList";
 
 // import Feature from "./component/feature";
