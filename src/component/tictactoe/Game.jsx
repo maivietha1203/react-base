@@ -30,6 +30,7 @@ const Game = () => {
     setState({
       ...state,
       board: Array(9).fill(),
+      xIsNext: true,
     });
   };
   return (
