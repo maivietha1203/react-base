@@ -1,16 +1,19 @@
-import { calculatewinner } from "../../helper";
+// import { calculatewinner } from "../../helper";
 import Cell from "./Cell";
 
-const Board = () => {
-  const cells = [null, null, null, "X", "X", "X", null, null, null];
-  console.log(calculatewinner(cells));
+const Board = (props) => {
+  //   console.log(props);
+  //   const cells = [null, null, null, "X", "X", "X", null, null, null];
+  //   console.log(calculatewinner(cells));
   return (
     <div className="game-board">
-      {Array(9)
-        .fill()
-        .map((item, index) => (
-          <Cell key={index}></Cell>
-        ))}
+      {props.cells.map((item, index) => (
+        <Cell
+          key={index}
+          value={item}
+          onClick={() => props.onClick(index)}
+        ></Cell>
+      ))}
     </div>
   );
 };
