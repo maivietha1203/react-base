@@ -5,23 +5,36 @@ import "./gameStyles.css";
 import { calculateWinner } from "../../helper";
 
 const Game = () => {
-  const [board, setBoard] = useState(Array(9).fill());
-  const [xIsNext, setXIsnext] = useState(true);
-  const winner = calculateWinner(board);
+  //   const [board, setBoard] = useState(Array(9).fill());
+  //   const [xIsNext, setXIsnext] = useState(true);
+  const [state, setState] = useState({
+    board: Array(9).fill(),
+    xIsNext: true,
+  });
+  const winner = calculateWinner(state.board);
   const handleClick = (index) => {
-    const boardCopy = [...board];
+    const boardCopy = [...state.board];
     if (winner || boardCopy[index]) return;
-    boardCopy[index] = xIsNext ? "X" : "O";
-    setBoard(boardCopy);
-    setXIsnext((xIsNext) => !xIsNext);
+    boardCopy[index] = state.xIsNext ? "X" : "O";
+    // setBoard(boardCopy);
+    // setXIsnext((xIsNext) => !xIsNext);
+    setState({
+      ...state,
+      board: boardCopy,
+      xIsNext: !state.xIsNext,
+    });
   };
   const handleResetGame = () => {
-    setBoard(Array(9).fill());
-    setXIsnext(true);
+    // setBoard(Array(9).fill());
+    // setXIsnext(true);
+    setState({
+      ...state,
+      board: Array(9).fill(),
+    });
   };
   return (
     <div>
-      <Board cells={board} onClick={handleClick}></Board>
+      <Board cells={state.board} onClick={handleClick}></Board>
       <div className="game-winner">{winner ? `winner is ${winner}` : ""}</div>
       <button className="game-reset" onClick={handleResetGame}>
         Reset Game
