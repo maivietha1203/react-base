@@ -1,4 +1,5 @@
 import "./App.css";
+import Counter from "./component/counter/Counter";
 import Toggle from "./component/toggle/Toggle";
 // import YoutubeList from "./component/youtube/YoutubeList";
 
@@ -13,6 +14,7 @@ function App() {
     <div>
       {/* <YoutubeList>{name}</YoutubeList> */}
       <Toggle></Toggle>
+      <Counter></Counter>
     </div>
   );
 }
