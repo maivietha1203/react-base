@@ -1,6 +1,7 @@
 import "./App.css";
-import Counter from "./component/counter/Counter";
-import Toggle from "./component/toggle/Toggle";
+import Game from "./component/tictactoe/Game";
+// import Counter from "./component/counter/Counter";
+// import Toggle from "./component/toggle/Toggle";
 // import YoutubeList from "./component/youtube/YoutubeList";
 
 // import Feature from "./component/feature";
@@ -13,8 +14,9 @@ function App() {
   return (
     <div>
       {/* <YoutubeList>{name}</YoutubeList> */}
-      <Toggle></Toggle>
-      <Counter></Counter>
+      {/* <Toggle></Toggle>
+      <Counter></Counter> */}
+      <Game></Game>
     </div>
   );
 }
