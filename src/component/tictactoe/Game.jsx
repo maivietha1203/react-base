@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Board from "./Board";
 
-import "./GameStyles.css";
+import "./gameStyles.css";
 import { calculateWinner } from "../../helper";
 
 const Game = () => {
@@ -22,7 +22,10 @@ const Game = () => {
   return (
     <div>
       <Board cells={board} onClick={handleClick}></Board>
-      <button onClick={handleResetGame}>Reset Game</button>
+      <div className="game-winner">{winner ? `winner is ${winner}` : ""}</div>
+      <button className="game-reset" onClick={handleResetGame}>
+        Reset Game
+      </button>
       {/* {winner ? `winner is ${xIsNext ? "X" : "O"}` : ""} */}
     </div>
   );
