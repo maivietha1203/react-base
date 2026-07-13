@@ -1,7 +1,10 @@
-import "./Button.scss";
+// import "./Button.scss";
+import styles from "./Button.module.css";
 const Button = (props) => {
   return (
-    <button className={`button ${props.className || ""}`}>
+    <button
+      className={`${styles.button} ${props.secondary ? styles.buttonSecondary : ""} `}
+    >
       {props.children}
     </button>
   );

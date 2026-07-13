@@ -21,7 +21,7 @@ function App() {
       {/* <Game></Game> */}
       {/* <DoubleCouter></DoubleCouter> */}
       <Button>Primary</Button>
-      <Button className="button--secondary">Primary</Button>
+      <Button secondary>Primary</Button>
     </div>
   );
 }
