@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  padding: 20px 30px;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(8, 74, 167);
+  border-radius: 8px;
+  width: 300px;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+.button.button--secondary {
+  display: inline-block;
+  padding: 20px 30px;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(167, 8, 8);
+  border-radius: 8px;
+  width: 300px;
+  border: none;
+  outline: none;
+  margin: 10px;
+}

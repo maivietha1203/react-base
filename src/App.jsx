@@ -1,5 +1,6 @@
 import "./App.css";
-import DoubleCouter from "./component/counter/DoubleCouter";
+import Button from "./component/button/Button";
+// import DoubleCouter from "./component/counter/DoubleCouter";
 // import Game from "./component/tictactoe/Game";
 // import Counter from "./component/counter/Counter";
 // import Toggle from "./component/toggle/Toggle";
@@ -18,7 +19,9 @@ function App() {
       {/* <Toggle></Toggle>
       <Counter></Counter> */}
       {/* <Game></Game> */}
-      <DoubleCouter></DoubleCouter>
+      {/* <DoubleCouter></DoubleCouter> */}
+      <Button>Primary</Button>
+      <Button className="button--secondary">Primary</Button>
     </div>
   );
 }
