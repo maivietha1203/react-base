@@ -10,14 +10,24 @@ const initialState = {
 };
 const gameReducer = (state, action) => {
   switch (action.type) {
-    case "CLICK":
+    case "CLICK": {
       const { board, xIsNext } = state;
       const { index, winner } = action.payload;
-      if (winner || board[index]) return;
+      if (winner || board[index]) return state;
       const nextState = JSON.parse(JSON.stringify(state));
-      return nextState;
+      nextState.board[index] = xIsNext ? "X" : "O";
+      nextState.xIsNext = !xIsNext;
 
+      return nextState;
+    }
+    case "RESET": {
+      const nextState = JSON.parse(JSON.stringify(state));
+      nextState.board = Array(9).fill(null);
+      nextState.xIsNext = true;
+      return nextState;
+    }
     default:
+      console.log("Error");
       break;
   }
 
@@ -59,6 +69,9 @@ const Game = () => {
     //   board: Array(9).fill(),
     //   xIsNext: true,
     // });
+    dispatch({
+      type: "RESET",
+    });
   };
   return (
     <div>
