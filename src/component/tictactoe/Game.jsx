@@ -11,8 +11,11 @@ const initialState = {
 const gameReducer = (state, action) => {
   switch (action.type) {
     case "CLICK":
-      console.log("123");
-      break;
+      const { board, xIsNext } = state;
+      const { index, winner } = action.payload;
+      if (winner || board[index]) return;
+      const nextState = JSON.parse(JSON.stringify(state));
+      return nextState;
 
     default:
       break;
@@ -30,12 +33,13 @@ const Game = () => {
   // });
   const winner = calculateWinner(state.board);
   const handleClick = (index) => {
-    const boardCopy = [...state.board];
-    if (winner || boardCopy[index]) return;
+    // const boardCopy = [...state.board];
+    // if (winner || boardCopy[index]) return;
     dispatch({
       type: "CLICK",
       payload: {
         index,
+        winner,
       },
     });
     // boardCopy[index] = state.xIsNext ? "X" : "O";
