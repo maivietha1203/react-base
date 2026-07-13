@@ -15,7 +15,7 @@ function App() {
   // console.log(double);
   // const name = "Mai Việt Hà";
   return (
-    <div>
+    <>
       {/* <YoutubeList>{name}</YoutubeList> */}
       {/* <Toggle></Toggle>
       <Counter></Counter> */}
@@ -24,7 +24,12 @@ function App() {
       {/* <Button>Primary</Button>
       <Button secondary>Primary</Button> */}
       <Card></Card>
-    </div>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </>
   );
 }
 
