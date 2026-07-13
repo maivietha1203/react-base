@@ -1,5 +1,6 @@
 import "./App.css";
-import Button from "./component/button/Button";
+import Card from "./component/card/Card";
+// import Button from "./component/button/Button";
 // import DoubleCouter from "./component/counter/DoubleCouter";
 // import Game from "./component/tictactoe/Game";
 // import Counter from "./component/counter/Counter";
@@ -20,8 +21,9 @@ function App() {
       <Counter></Counter> */}
       {/* <Game></Game> */}
       {/* <DoubleCouter></DoubleCouter> */}
-      <Button>Primary</Button>
-      <Button secondary>Primary</Button>
+      {/* <Button>Primary</Button>
+      <Button secondary>Primary</Button> */}
+      <Card></Card>
     </div>
   );
 }
