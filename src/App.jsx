@@ -1,5 +1,6 @@
 import "./App.css";
-import Game from "./component/tictactoe/Game";
+import DoubleCouter from "./component/counter/DoubleCouter";
+// import Game from "./component/tictactoe/Game";
 // import Counter from "./component/counter/Counter";
 // import Toggle from "./component/toggle/Toggle";
 // import YoutubeList from "./component/youtube/YoutubeList";
@@ -16,7 +17,8 @@ function App() {
       {/* <YoutubeList>{name}</YoutubeList> */}
       {/* <Toggle></Toggle>
       <Counter></Counter> */}
-      <Game></Game>
+      {/* <Game></Game> */}
+      <DoubleCouter></DoubleCouter>
     </div>
   );
 }
