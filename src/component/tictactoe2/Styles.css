@@ -1,0 +1,92 @@
+.game-board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.cell {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px 5px rgba(78, 78, 78, 0.173);
+  border-radius: 3px;
+}
+.cell.is-x {
+  color: #2cccff;
+}
+.cell.is-o {
+  color: #ff6651;
+}
+
+.win {
+  padding: 25px;
+  font-size: 20px;
+  color: rgb(241, 113, 134);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: bisque;
+}
+.game {
+  background-color: #ffffff;
+  padding: 55px 78px;
+  border-radius: 70px;
+  display: flex;
+}
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  height: auto;
+}
+.reset {
+  border: none;
+  border-radius: 5px;
+  background-color: #2cccff;
+  padding: 7px 15px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+.btn-move {
+  border: none;
+  background-color: #2cccff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 7px 0;
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+}
+.current-move {
+  height: calc(500px - 48px);
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.current-move::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  display: flex;
+}
+.button-move {
+  background-color: #ffffff;
+  margin: 5px;
+  border-radius: 50px;
+  height: 500px;
+  padding: 24px;
+  margin-left: 37px;
+}

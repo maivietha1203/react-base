@@ -1,18 +1,18 @@
-import Cell from "./Cell";
+import Cell2 from "./Cell2";
 
-const Board = (props) => {
+const Board2 = (props) => {
   return (
     <div className="game-board">
       {props.cells.map((item, index) => (
-        <Cell
+        <Cell2
           key={index}
           value={item}
           onClick={() => props.onClick(index)}
-          className={item === "X" ? "is-x" : item === "O" ? "is-o" : ""}
-        ></Cell>
+          classname={item === "X" ? "is-x" : item === "O" ? "is-o" : ""}
+        ></Cell2>
       ))}
     </div>
   );
 };
 
-export default Board;
+export default Board2;

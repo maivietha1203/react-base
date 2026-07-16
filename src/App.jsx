@@ -1,34 +1,19 @@
 import "./App.css";
-import Card from "./component/card/Card";
-// import Button from "./component/button/Button";
-// import DoubleCouter from "./component/counter/DoubleCouter";
+import Game2 from "./component/tictactoe2/Game2";
 // import Game from "./component/tictactoe/Game";
-// import Counter from "./component/counter/Counter";
-// import Toggle from "./component/toggle/Toggle";
-// import YoutubeList from "./component/youtube/YoutubeList";
 
-// import Feature from "./component/feature";
+// import Card from "./component/card/Card";
 
 function App() {
-  // const numbers = [1, 2, 3, 4, 5];
-  // const double = numbers.map((item) => item * 2);
-  // console.log(double);
-  // const name = "Mai Việt Hà";
   return (
     <>
-      {/* <YoutubeList>{name}</YoutubeList> */}
-      {/* <Toggle></Toggle>
-      <Counter></Counter> */}
-      {/* <Game></Game> */}
-      {/* <DoubleCouter></DoubleCouter> */}
-      {/* <Button>Primary</Button>
-      <Button secondary>Primary</Button> */}
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      {/* {Array(5)
+        .fill(0)
+        .map((index) => (
+          <Card key={index} />
+        ))} */}
+      {/* <Game /> */}
+      <Game2></Game2>
     </>
   );
 }
